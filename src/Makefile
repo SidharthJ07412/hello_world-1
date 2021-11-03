@@ -1,20 +1,17 @@
-CC= gcc
-CFLAGS=
-LIB=
+CC = gcc
+CFLAGS =
+LIB =
 
-all:main
+all:main_sidharth
+
 hello:
-	$(CC) $(CFLAGS) -c hello.c 
- 
- main:hello
-	$(CC) $(CFLAGS) hello.o main.c -o main
+	$(CC) $(CFLAGS) -c hello_sidharth.c
 
-
-myfile:
-	$(CC) $(CFLAGS) -c myfile.c
-
-main:myfile
-	$(CC) $(CFLAGS) myfile.o main.c -o main
+main:hello
+	$(CC) $(CFLAGS) hello_sidharth.o main_sidharth.c -o main_sidharth
 
 run:
-	.\main.exe
+	./main_sidharth
+
+clean:
+	rm main_sidharth
